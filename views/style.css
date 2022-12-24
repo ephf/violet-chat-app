@@ -1,0 +1,153 @@
+:root {
+  --primary: #6B21F3;
+  --primary-overlay: #6B21F399;
+  --secondary: #F2BA05;
+
+  --background: #ede7fa;
+  --foreground-light: #9c9ba1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+  background-image: url(https://4kwallpapers.com/images/wallpapers/aubrieta-violet-flowers-blossom-spring-bloom-purple-floral-1440x2560-2683.jpg);
+  background-size: 150%;
+  box-shadow: inset 0 0 0 100vw var(--primary-overlay);
+
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+}
+
+.shadow {
+  box-shadow: 0 0 .5rem .2rem #0001;
+}
+
+main {
+  width: 35rem;
+  margin: .5rem;
+
+  background: var(--background);
+
+  border-radius: 1rem;
+  box-sizing: border-box;
+  padding: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+#messages {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column-reverse;
+  gap: .5em;
+
+  overflow: hidden;
+}
+
+#messages > :not(.message) {
+  color: var(--foreground-light);
+}
+
+#messages > .message {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: .2em;
+}
+
+#messages > .message .content {
+  width: fit-content;
+  background: var(--foreground-light);
+
+  padding: .3rem;
+  padding-left: .7rem;
+  padding-right: .7rem;
+  border-radius: 5rem;
+}
+
+#messages > .message.me {
+  align-self: flex-end;
+  align-items: flex-end;
+}
+
+#messages > .message.me .content {
+  background: var(--primary);
+}
+
+#inputs {
+  height: 2.5rem;
+
+  display: flex;
+  gap: 1rem;
+}
+
+#inputs input {
+  flex-grow: 1;
+}
+
+#inputs input {
+  outline: none;
+  background: none;
+  border: 2px solid var(--primary);
+  border-radius: 2.5rem;
+
+  padding: 1em;
+}
+
+#inputs button {
+  width: 2.5rem;
+  background: var(--primary);
+  
+  border: none;
+  border-radius: 100%;
+  
+  display: grid;
+  place-items: center;
+
+  transition: background .5s;
+}
+
+#inputs button:hover {
+  background: var(--secondary);
+}
+
+#inputs button img {
+  translate: -1px 1px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+nav {
+  position: absolute;
+  left: .5rem;
+  top: .5rem;
+
+  background: var(--background);
+  width: 2.7rem;
+  height: 2.7rem;
+
+  border-radius: 1rem;
+}
+
+nav > a {
+  width: 100%;
+  height: 100%;
+
+  display: grid;
+  place-items: center;
+}

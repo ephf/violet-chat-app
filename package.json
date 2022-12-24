@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "test": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "type": "module"
+}
